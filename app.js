@@ -1,77 +1,103 @@
-let age = "dfcff";
-age = +age;
-if (!isNaN(age)) {
-	if (age === null) {
-		console.log("Некорректный возраст!");
-	}
-}	else {
-	console.log("Некорректный возраст!");
+// Задание 1
+
+/*let a = 1;
+let b = 2;
+let c = 3;
+let max = null;
+
+if (a > b) {
+	max = a;
+}
+else {
+	max = b;
+}
+if (max < c) {
+	max = c;
+}
+console.log(max);
+
+// Задание 2
+let t = 35;
+if (t < -30) {
+	console.log("Оставайтесь дома!");
+}
+else if (t >= -30 && t <= -10) {
+	console.log("Сегодня холодно!");
+}
+else if (t >= -9 && t <= 5) {
+	console.log("Не холодно!");
+}
+else if (t >= 6 && t <= 15) {
+	console.log("Тепло!");
+}
+else if (t >= 16 && t <= 25) {
+	console.log("Очень тепло!");
+}
+else if (t >= 26 && t < 35) {
+	console.log("Жарко!");
+}
+else {
+	console.log("Пекло!");
 }
 
-
-
-if(age) {
-		if (age > 18) {
-		console.log("Добро пожаловать!");
-	}	else if (age === 18) {
-		console.log("Поздравляем с совершеннолетием!");
-	}	else {
-		console.log("Вы ещё слишком малы!");
-	}
-} else {
-	console.log("Укажите Ваш возраст!");
-}
-
-let gender = "Чен";
-if (gender.toLocaleLowerCase() === "муж") {
-	console.log("Вам налево");
-}	else if (gender.toLocaleLowerCase() === "жен") {
-	console.log("Вам направо");
-}	else {
-	console.log("Вам в Европу!!!!!!");
-}
-
-
-
-
-// let isUser = false;
-// let typeUser = isUser ? "Пользователь" : "Бот" ;
-// console.log("Добро пожаловать" + typeUser);
-
-let typeUser = "admin"; //user, guest, bot
-switch (typeUser) {
+// Задание 3
+let userName = "user";
+switch (userName) {
 	case "admin":
-		console.log("Вы admin!");
-	break;
+		alert("Добро пожаловать! Вы администратор!");
+	break
 	case "user":
-		console.log("Вы user!");
-	break;
-	case "guest":
-		console.log("Вы guest!");
-	break;
+		alert("Добро пожаловать! Вы пользователь!");
+	break
+	case "manager":
+		alert("Добро пожаловать! Вы менеджер!");
+	break
 	case "bot":
-		console.log("Вы bot!");
-	break;
+		alert("В доступе отказано! Вы бот!");
+	break
 	default:
-		console.log("Мы вас не знаем!");
+		alert("Мы с Вами не знакомы!");
 	break;
 }
+
+
+// Задание 4
+let logicOne = null || 0 || "" || undefined;
+console.log(logicOne); // Выведет undefined, как последнее ложное значение
+
+let logicTwo = "яблоко" && true && null && 1;
+console.log(logicTwo); // Выведет null, как первое ложное значение
+
+let logicThree = 0 || true && "false" || null;
+console.log(logicThree); // Выведет строку "false", т. к. приоритет оператора && выше. Он выполнится первым
+// и сравнит true и "false", вернув последнее истинное "false". Это значение будет первым истинным при 
+//сравнение || и именно оно вернётся 
+
+let logicFour = 0 && true || "false" && null;
+console.log(logicFour); // Влевой части вернётся первое ложное - 0, в правой первое ложное - null.  
+// 0 || null вернёт последнее ложное - null
+
+let logicFive = !0 && !!1;
+console.log(logicFive); // 0 - fasle, !0 - true. !1 - false, !!1 - true. true && true  - вернёт последнее true.
+
+let logicSix = !(null || !"апельсин" && true);
+console.log(logicSix); // Pначение !"апельсин" - это false. false && true - вернёт false. 
+// null || false - вернёт false. !false = true. Вернётся true.
+*/
+// Задание 5
+let myString = "Эту строку надо выводить";
+let n = 15;
 let i = 0;
-const lastNumber = 20;
-let resultStrig = '';
-while (++i<=lastNumber) {
-	resultStrig += `${i}${i !== lastNumber ? ', ' : ''}`;
-}
-console.log(resultStrig);
 
-let j = 20;
-let resultStrig2 = '';
-while (j>=0) {
-	resultStrig2 += `${j}${j !== 0 ? ', ' : ''}`;
-	j--;
+while (i < n) {
+	i++;
+	console.log(myString);
 }
-console.log(resultStrig2);
 
-// for (let k=1; k<=10; k++) {
-// 	console.log(k);
-// }
+for (let i = 0; i < n; i++) {
+	console.log(myString);
+}
+
+// Задание 6
+
+// Задание 7
