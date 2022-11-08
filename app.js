@@ -83,7 +83,7 @@ console.log(logicFive); // 0 - fasle, !0 - true. !1 - false, !!1 - true. true &&
 let logicSix = !(null || !"апельсин" && true);
 console.log(logicSix); // Pначение !"апельсин" - это false. false && true - вернёт false. 
 // null || false - вернёт false. !false = true. Вернётся true.
-*/
+
 // Задание 5
 let myString = "Эту строку надо выводить";
 let n = 15;
@@ -97,7 +97,34 @@ while (i < n) {
 for (let i = 0; i < n; i++) {
 	console.log(myString);
 }
-
+*/
 // Задание 6
+let M = 2;
+let N = 100;
+let l = 0; // Количество дней
+while (M < N) {
+	N = Math.trunc(N/2);
+	l++;
+}
+console.log(`Машины закончатся через ${l} дней`);
 
 // Задание 7
+let z = 1800;
+let v = 2020;
+let b = 0; // Количество итераций для поиска 1961
+let d = 0; // Количество итераций для поиска високосных лет
+for (; z <= v; z++ ) {
+	if(z === 1961) break;
+	b++;
+}
+console.log(`Количество итераций = ${b}`);
+z = 1800;
+
+
+for (; z <= v; z += 4 ) {
+	if(z > 1961 - 4) break;
+	d++;
+}
+console.log(`Количество високосных лет = ${d}`);
+// Или можно ещё:
+console.log(`Количество високосных лет = ${Math.trunc(b/4)}`);
